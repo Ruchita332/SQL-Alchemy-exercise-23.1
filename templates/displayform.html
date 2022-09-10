@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+Create User
+{% endblock %}
+
+
+{% block content %}
+<form method="POST">
+    <!-- lable for is associated with the input with same id name -->
+   <p>
+        <label for="fname"> First name  &emsp;&ensp;  </label> 
+        <input type="text" id="fname" placeholder="Enter a first name" name="fname" required>
+    </p>
+    <p>
+        <label for="lname"> Last name &emsp;&ensp;</label>
+        <input type="text" id="lname" placeholder="Enter a last name" name="lname" required>
+    </p>
+        <label for="url"> Imate URL &emsp; </label>
+        <input type="url" id="url" placeholder="Provide an image of this user" name="url">
+    <p>    
+        <button type="submit">ADD</button>
+    </p>
+</form>    
+{% endblock %}

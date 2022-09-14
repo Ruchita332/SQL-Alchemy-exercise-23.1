@@ -8,7 +8,7 @@
 
 <!-- {{u.id}} -->
 <div>
-    <img src="{{u.image_url}}" alt="user image" width="300" height="300">
+    <img src="{{u.image_url}}" alt="{{u.fullname}}" width="300" height="300">
     
     <h1>{{ u.full_name }}</h1>
 
@@ -21,6 +21,26 @@
       </button>
     </form>
     
+</div>
+
+<div>        
+        <!-- User posts goes here -->
+        <h2> Posts</h2>
+        <ul>
+        {% for post in u.posts %}
+        <li>
+        <a href="/posts/{{post.id}}">{{post.title}} <small>{{post.friendly_date}}</small></a>
+        
+        </li>
+
+        {% endfor %}
+        </ul>
+
+
+        <form>
+        <button formaction="/users/{{u.id}}/posts/new"
+        formmethod="GET">Add Post</button>
+        </form>
 </div>
 
 

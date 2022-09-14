@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<h1> Blogly Recent Posts</h1>
+
+{% for post in posts %}
+<h2> <a href="/posts/{{post.id}}">{{post.title}}</a></h2>
+<p>{{post.content}}</p>
+<small> By {{post.user.full_name}} {{post.friendly_date}}</small>
+{% endfor %}
+
+{% endblock %}

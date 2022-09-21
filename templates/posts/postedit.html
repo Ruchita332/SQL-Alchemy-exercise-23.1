@@ -7,16 +7,28 @@
     <div>
         <label for="title" >New Title</label>
         <div >
-        <input id="title" name="title" >
+        <input id="title" name="title" value="{{post.title}}">
         </div>
     </div>
     
     <div >
         <label for="content">Post Content</label>
         <div >
-        <textarea id="content" name="content" ></textarea>
+        <textarea id="content" name="content" >{{post.content}}</textarea>
         </div>
     </div>
+    <div>
+        {% for tag in tags %}
+        <input 
+        type="checkbox" 
+        value="{{tag.id}}" 
+        id="tag_{{tag.id}}"
+        {% if tag in post.tags %} checked {% endif %} 
+        name = "tags">
+        <label for="tag_{{tag.id}}">{{tag.name}}</label>
+        {% endfor %}
+    </div>
+
     
     <div>    
         <a href="/users/{{post.user_id}}"> 

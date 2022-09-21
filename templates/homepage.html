@@ -8,5 +8,9 @@
 <p>{{post.content}}</p>
 <small> By {{post.user.full_name}} {{post.friendly_date}}</small>
 {% endfor %}
+<form>
+<button formaction="/users">Users List</button>
+<button formaction="/tags">Tags List</button>
+</form>
 
 {% endblock %}

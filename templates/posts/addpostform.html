@@ -16,6 +16,13 @@
         <textarea id="content" name="content" ></textarea>
         </div>
     </div>
+    <div>
+        {% for tag in tags %}
+        <input type="checkbox" value="{{tag.id}}" id="tag_{{tag.id}}" name="tags">  
+        <label for ="tag_{{tag.id}} ">{{tag.name}}</label>
+        {% endfor %}
+
+    </div>
     
     <div>    
         <a href="/users/{{user.id}}"> 

@@ -8,14 +8,14 @@
     <h1>User Edit Page</h1>
    <p>
         <label for="fname"> First name  &emsp;&ensp;  </label> 
-        <input type="text" id="fname" placeholder="Enter a first name" name="fname">
+        <input type="text" id="fname" value={{user.first_name}} placeholder="Enter a first name" name="fname">
     </p>
     <p>
         <label for="lname"> Last name &emsp;&ensp;</label>
-        <input type="text" id="lname" placeholder="Enter a last name" name="lname">
+        <input type="text" id="lname" value= {{user.last_name}} placeholder="Enter a last name" name="lname">
     </p>
         <label for="url"> Imate URL &emsp; </label>
-        <input type="url" id="url" placeholder="Provide an image of this user" name="url">
+        <input type="url" id="url" value= {{user.image_url}}placeholder="Provide an image of this user" name="url">
     <p>  
         <a href="/users"><button>Cancel</button></a>
         
